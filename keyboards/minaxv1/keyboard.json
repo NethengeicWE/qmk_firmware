@@ -150,14 +150,17 @@
             "starlight_dual_sat":true,
             "typing_heatmap": true
         },
-        "driver": "WS2812"
+        "driver": "ws2812"
+
     },
 
     "ws2812": {
-        "driver": "pwm",
-        "pin": "B1"
+        "driver": "pwm"
     },
-
+    "matrix_size":{
+        "cols":10,
+        "rows":9
+    },
     "layouts": {
         "LAYOUT_minax": {
             "layout": [

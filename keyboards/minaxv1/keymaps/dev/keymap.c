@@ -1,6 +1,11 @@
 // Copyright 2023 QMK
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+/*
+dev keymap:Test for the 54keys layout
+
+*/
+
 #include <quantum.h>
 #include "analog.c"
 #include "oled.c"
@@ -17,32 +22,6 @@ enum my_keycode{
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    /*
-    ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐    
-    |TO |F7 |F4 |F1 |DEL|F10|F2 |F5 |F8 |PGU|     
-    ├───┴───┴───┴───┴───┴───┴───┴───┴───┴───┤ 
-    |PGD|F9 |F6 |F3 |F11|JC1|ETR|XXX|F12|~  |  
-    ├───┴───┴───┴───┴───┴───┴───┴───┴───┴───┤     
-    |ESC|TAB|CAP|LSF|LCT|LWI|Z  |A  |Q  |1  |     
-    ├───┴───┴───┴───┴───┴───┴───┴───┴───┴───┤ 
-    |2  |W  |S  |X  |LAL|SPC|C  |D  |E  |3  |     
-    ├───┴───┴───┴───┴───┴───┴───┴───┴───┴───┤  
-    |4  |R  |F  |V  |MO |XXX|B  |G  |T  |5  |     
-    ├───┴───┴───┴───┴───┴───┴───┴───┴───┴───┤
-    |6  |Y  |H  |N  |SPC|RAL|M  |J  |U  |7  |
-    ├───┴───┴───┴───┴───┴───┴───┴───┴───┴───┤
-    |8  |I  |K  |<  |>  |LST|/  |L  |O  |9  |
-    ├───┴───┴───┴───┴───┴───┴───┴───┴───┴───┤
-    |0  |P  |;  |RSF|MEN|RCT|FN |'  |[  |-  |
-    ├───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
-    |=  |]  |\  |ETR|BAS|
-    └───┴───┴───┴───┴───┘
-
-    ??? == let me think
-    xxx == null
-    JC = JOYSTICK
-    */
-
     // 圣徒，你知道人类将你那些倒下的同胞制成弹药给我们使用吗
     // 这就是生命的轮回，这个概念你永远也无法理解的
     [0] = LAYOUT_minax(

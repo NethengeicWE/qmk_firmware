@@ -4,9 +4,9 @@
     "editor.insertSpaces": true,
     // Configure glob patterns for excluding files and folders.
     "files.exclude": {
-        "**/.build": true,
-        "**/*.hex": true,
+        "**/.git": false,
         "**/*.bin": true,
+        "**/*.hex": true,
         "**/*.uf2": true
     },
     "files.associations": {
@@ -30,5 +30,6 @@
     },
     "clangd.arguments": [
         "--header-insertion=never"
-    ]
+    ],
+    "C_Cpp.dimInactiveRegions": false
 }
