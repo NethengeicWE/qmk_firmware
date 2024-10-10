@@ -2,11 +2,16 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 /*
-dev keymap:Test for the 54keys layout
+
+Dev Keymap:
+Test for the 54keys layout,remove the numpad and notation key.
+    * one question remains: left_hand extend key is pretty useful in pratics,but it will break the symmple of layout
 
 */
-
+// 问无限的问题，引出无限的答案，带来无限的进步
+// Infinite queries spawn endless solutions, leading to boundless advancement.
 #include <quantum.h>
+#include QMK_KEYBOARD_H
 #include "analog.c"
 #include "oled.c"
 #include <send_string_keycodes.h>
@@ -29,8 +34,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_PGDN ,KC_F4  ,KC_F3  ,KC_F2  ,KC_F1  ,KC_BTN1,KC_ENT ,        KC_DEL ,KC_GRV ,
         KC_ESC  ,KC_TAB ,KC_CAPS,KC_LSFT,KC_LCTL,KC_LGUI,KC_Z   ,KC_A   ,KC_Q   ,KC_1   ,
         KC_2    ,KC_W   ,KC_S   ,KC_X   ,KC_LALT,KC_SPC ,KC_C   ,KC_D   ,KC_E   ,KC_3   ,
-        KC_4    ,KC_R   ,KC_F   ,KC_V   ,LT(2,KC_UP)  ,        KC_B   ,KC_G   ,KC_T   ,KC_5   ,
-        KC_6    ,KC_Y   ,KC_H   ,KC_N   ,TT(1) ,KC_RALT,KC_M   ,KC_J   ,KC_U   ,KC_7   ,
+        KC_4    ,KC_R   ,KC_F   ,KC_V   ,LT(2,KC_UP),    KC_B   ,KC_G   ,KC_T   ,KC_5   ,
+        KC_6    ,KC_Y   ,KC_H   ,KC_N   ,TT(1)  ,KC_RALT,KC_M   ,KC_J   ,KC_U   ,KC_7   ,
         KC_8    ,KC_I   ,KC_K   ,KC_COMM,KC_DOT ,KC_RGUI,KC_SLSH,KC_L   ,KC_O   ,KC_9   ,
         KC_0    ,KC_P   ,KC_SCLN,KC_RSFT,KC_APP ,KC_RCTL,KC_UP  ,KC_QUOT,KC_LBRC,KC_MINS,
         KC_EQUAL,KC_RBRC,KC_BSLS,KC_ENT ,KC_BSPC
@@ -42,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TO(0)   ,KC_7   ,KC_4   ,KC_1   ,KC_BSPC,KC_0   ,KC_2   ,KC_5   ,KC_8   ,KC_PAST,
         KC_PSLS ,KC_9   ,KC_6   ,KC_3   ,KC_DOT ,KC_BTN2,_______,        KC_PPLS,KC_PMNS,
         KC_ESC  ,_______,_______,_______,_______,_______,KC_1   ,KC_4   ,KC_7   ,_______,
-        _______ ,KC_8   ,KC_5   ,KC_2   ,_______,_______,KC_3   ,KC_6   ,KC_9   ,_______,
+        _______ ,KC_8   ,KC_5   ,KC_2   ,_______,_______,KC_3   ,KC_6   ,KC_9   ,_______, 
         _______ ,KC_PPLS,KC_PSLS,KC_ENT ,_______,        _______,_______,_______,_______,
         _______ ,_______,_______,_______,_______,_______,_______,_______,_______,_______,
         _______ ,_______,_______,_______,_______,_______,_______,_______,_______,_______,

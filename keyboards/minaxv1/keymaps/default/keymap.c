@@ -1,7 +1,7 @@
 // Copyright 2023 QMK
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-#include <quantum.h>
+#include QMK_KEYBOARD_H
 #include "analog.c"
 #include "oled.c"
 #include <send_string_keycodes.h>
