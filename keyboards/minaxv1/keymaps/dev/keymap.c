@@ -5,12 +5,12 @@
 
 Dev Keymap:
 Test for the 54keys layout,remove the numpad and notation key.
-    * one question remains: left_hand extend key is pretty useful in pratics,but it will break the symmple of layout
-
+There are few question need to be solved:
+    * left_hand extend key is pretty useful in pratics,but it will break the symmple of layout
+    * why doesn't work?:TT,LT
 */
-// 问无限的问题，引出无限的答案，带来无限的进步
-// Infinite queries spawn endless solutions, leading to boundless advancement.
-// Test message to check the update log on the github
+
+
 #include <quantum.h>
 #include QMK_KEYBOARD_H
 #include "analog.c"
@@ -22,27 +22,28 @@ Test for the 54keys layout,remove the numpad and notation key.
 #define joystick_x_axis A4
 #define joystick_y_axis A3
 #define TASTING_VERSION FALSE
-    
+#undef TAPPING_TOGGLE
+#define TAPPING_TOGGLE 2
+
 enum my_keycode{
     RGB_ANIM = SAFE_RANGE,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    // 圣徒，你知道人类将你那些倒下的同胞制成弹药给我们使用吗
-    // 这就是生命的轮回，这个概念你永远也无法理解的
+    // 问无限的问题，引出无限的答案，带来无限的进步
+    // Infinite queries spawn endless solutions, leading to boundless advancement.
     [0] = LAYOUT_minax(
         TO(1)   ,KC_F12 ,KC_F11 ,KC_F10 ,KC_F9  ,KC_F5  ,KC_F6  ,KC_F7  ,KC_F8  ,KC_PGUP,
         KC_PGDN ,KC_F4  ,KC_F3  ,KC_F2  ,KC_F1  ,KC_BTN1,KC_ENT ,        KC_DEL ,KC_GRV ,
-        KC_ESC  ,KC_TAB ,KC_CAPS,KC_LSFT,KC_LCTL,KC_LGUI,KC_Z   ,KC_A   ,KC_Q   ,KC_1   ,
+        KC_ESC  ,KC_TAB ,KC_LCTL,KC_LSFT,KC_CAPS,KC_LGUI,KC_Z   ,KC_A   ,KC_Q   ,KC_1   ,
         KC_2    ,KC_W   ,KC_S   ,KC_X   ,KC_LALT,KC_SPC ,KC_C   ,KC_D   ,KC_E   ,KC_3   ,
-        KC_4    ,KC_R   ,KC_F   ,KC_V   ,LT(2,KC_UP),    KC_B   ,KC_G   ,KC_T   ,KC_5   ,
+        KC_4    ,KC_R   ,KC_F   ,KC_V   ,MO(2),    KC_B   ,KC_G   ,KC_T   ,KC_5   ,
         KC_6    ,KC_Y   ,KC_H   ,KC_N   ,TT(1)  ,KC_RALT,KC_M   ,KC_J   ,KC_U   ,KC_7   ,
         KC_8    ,KC_I   ,KC_K   ,KC_COMM,KC_DOT ,KC_RGUI,KC_SLSH,KC_L   ,KC_O   ,KC_9   ,
         KC_0    ,KC_P   ,KC_SCLN,KC_RSFT,KC_APP ,KC_RCTL,KC_UP  ,KC_QUOT,KC_LBRC,KC_MINS,
         KC_EQUAL,KC_RBRC,KC_BSLS,KC_ENT ,KC_BSPC
     ),                                                                                                    
-    // 通过斗争与胜利，这个社会已经实现了每一个年轻文明的抱负：
-    // 一个有着统一目标的家园，一条通往璀璨群星的道路
+
    [1] = LAYOUT_minax(
         // Super Shift Layer
         TO(0)  ,KC_7   ,   KC_4   ,     KC_1   ,KC_BSPC,KC_0   ,KC_2   ,KC_5   ,KC_8   ,KC_PAST,
@@ -52,11 +53,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,KC_PPLS,   KC_PSLS,     KC_ENT ,_______,  LSFT(KC_COMM),KC_BSLS,LSFT(KC_BSLS),_______,
         _______,_______,   KC_SCLN,LSFT(KC_DOT),_______,_______,KC_COMM,LSFT(KC_SCLN),KC_LBRC,_______,
         _______,KC_RBRC,   LSFT(KC_LBRC),_______,_______,_______,_______,LSFT(KC_RBRC),LSFT(KC_9),_______,
-        _______,LSFT(KC_0),_______,_______,_______,_______,_______,_______,_______,_______,
+        _______,LSFT(KC_0),_______,_______,_______,_______,_______,_______,_______,NK_TOGG,
         _______,_______,   _______,_______,_______
     ),
-    // 自然进化一直以来只能用一个简单且粗暴的词来形容：失败
-    // 如今，我们将亲自定义成功
+
     [2] = LAYOUT_minax(
         // Fn Layer
         _______ ,_______,_______,_______,_______,_______,_______,_______,_______,_______,
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RGB_ANIM,KC_F12 ,KC_F8  ,KC_F4  ,_______,        KC_ENT,KC_DEL,_______,RGB_HUI,
         RGB_SAI ,_______,KC_HOME,KC_END ,LCTL(LGUI(KC_RIGHT)),_______,_______,_______,_______,RGB_SAD,
         RGB_VAI ,_______,_______,_______,_______,_______,_______,_______,_______,RGB_VAD,
-        HF_TOGG ,_______,_______,_______,_______,_______,_______,_______,_______,_______,
+        HF_TOGG ,_______,_______,_______,_______,_______,_______,_______,_______,CL_TOGG,
         _______ ,_______,_______,_______,_______
     )
     // Strange game
