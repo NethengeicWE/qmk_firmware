@@ -3,7 +3,7 @@
 This branch is indicated by the official document.The following is th e description of the project documents:
 * keyboard
     * minaxv1:   
-        For more information about it, please refer to it [readme-minax.md](keyboards\minaxv1\readme.md).
+        For more information about it, please refer to it [readme-minax.md](keyboards/minaxv1/readme.md).
         * TO DO:
         1. The CAD file for using acrylic sheets to stack and make the shell will be organized and uploaded.
         1. pcb design will be organized and uploaded too,but verified version was lsot.
