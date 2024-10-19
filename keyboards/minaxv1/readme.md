@@ -3,11 +3,17 @@ The reckless work from humble college students
 [minaxv1]
 
 Why I make this keyboard:
-1.I really dont like moving right hand between mouse and keyboard,sometime to press shortcut,others input num by numberpad.
-2.Dealing with the vacation study plan of the college base.
-3.An old saying: To do a good job, one must first sharpen one's tools.
+1. I really dont like moving right hand between mouse and keyboard,sometime to press shortcut,others input num by numpad.
+1. Dealing with the vacation study plan of the college base.
+    * 2024.10.19 supplement: Useless
+1. An old saying: To do a good job, one must first sharpen one's tools.
 What is the difference between going to the battlefield without a pen and going to class without a gun:(
-
+    
+Future planing
+1. 3d shell,using verified by 3d print,in order to metal shell.
+1. wireless by nRF(stilling considered),and Lithium battery power management.
+1. Switching between multiple computers.
+1. test for new keyboard layout
 
 * Keyboard Maintainer: [br Zhang](https://github.com/NethengeicWE)
 * Hardware Supported: STM32F103C8T6(or BluePill)

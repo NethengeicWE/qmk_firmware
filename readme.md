@@ -1,5 +1,25 @@
 # Quantum Mechanical Keyboard Firmware
+## Branch Description
+This branch is indicated by the official document.The following is th e description of the project documents:
+* keyboard
+    * minaxv1:   
+        For more information about it, please refer to it [readme-minax.md](keyboards\minaxv1\readme.md).
+        * TO DO:
+        1. The CAD file for using acrylic sheets to stack and make the shell will be organized and uploaded.
+        1. pcb design will be organized and uploaded too,but verified version was lsot.
+        1. The 3D printing and CNC machining with metal shell is currently being designed.
+    * minaxv2:   
+    minaxv1 with wireless using nRF(Lack of data) and other imporvements that haven't been thought of yet.
+    * rhodes75: For reference,by HiryKun: https://github.com/HiryKun
+    * rs_pad: cit.
+    * testing_pad_xxx: Preliminary feasibility verification
+    * Sample: The original project files of the main branch
 
+
+
+
+
+## Orignal readme.md retention:
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
 [![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/Uq7gcHh)
 [![Docs Status](https://img.shields.io/badge/docs-ready-orange.svg)](https://docs.qmk.fm)
