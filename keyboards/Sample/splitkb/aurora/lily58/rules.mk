@@ -1,4 +1,5 @@
-# Copyright 2022 splitkb.com <support@splitkb.com>
+# Copyright 2022 Vladislav Kucheriavykh
+# Copyright 2024 Google LLC
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -13,4 +14,4 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-DEFAULT_FOLDER = splitkb/aurora/lily58/rev1
+INTROSPECTION_KEYMAP_C = test_keymap.c
